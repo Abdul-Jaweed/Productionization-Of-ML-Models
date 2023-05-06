@@ -101,9 +101,12 @@ if st.button('Predict'):
     query_point_transformed = scaler.transform(query_point)
     prediction = lr.predict(query_point_transformed)
     if prediction == 0:
-        st.success("You don't have a heart disease!")
+        st.success("You don't have a Heart Disease 😊!")
+        st.image('images/happy_heart.jfif')
     else:
-        st.error("You have a heart disease!")
+        st.error("You have a Heart Disease 😥!")
+        st.image('images/damaged_heart.jfif')
+        
 
     
     # prediction=pipe.predict(df_userinput)[0]
